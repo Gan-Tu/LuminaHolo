@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f3f4f8;
+  --foreground: #17181d;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #fbfbfd 0%, #f3f4f8 100%);
+  color: var(--foreground);
+  font-family:
+    Inter, "SF Pro Display", "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+.lumina-hero {
+  background:
+    radial-gradient(circle at 78% 16%, rgba(255, 255, 255, 0.88), transparent 22%),
+    radial-gradient(circle at 64% 78%, rgba(210, 222, 255, 0.38), transparent 24%),
+    linear-gradient(180deg, #fcfcfd 0%, #f1f3f8 100%);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.text-pretty {
+  text-wrap: pretty;
+}
+
+.animate-reveal-up {
+  animation: reveal-up 0.95s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.animate-float-product {
+  animation: float-product 7.2s ease-in-out infinite;
+  transform-origin: 50% 55%;
+}
+
+@keyframes reveal-up {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 28px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes float-product {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -6px, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
