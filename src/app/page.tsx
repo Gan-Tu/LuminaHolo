@@ -34,25 +34,25 @@ const showcaseCards = [
   {
     title: "Visualize",
     description: "See 3D holograms in stunning detail.",
-    image: "/lumina-card-visualize.png",
+    image: "/lumina-card-visualize-light-2.png",
     alt: "Woman wearing Lumina glasses",
   },
   {
     title: "Interact",
     description: "Use natural gestures to control your world.",
-    image: "/lumina-card-interact.png",
+    image: "/lumina-card-interact-light.png",
     alt: "Hands controlling floating holographic panels",
   },
   {
     title: "Create",
     description: "Turn ideas into immersive spatial experiences.",
-    image: "/lumina-card-create.png",
+    image: "/lumina-card-create-light.png",
     alt: "Immersive spatial scene in a living room",
   },
   {
     title: "Connect",
     description: "Be present, wherever you are.",
-    image: "/lumina-card-connect.png",
+    image: "/lumina-card-connect-light.png",
     alt: "Person collaborating through holographic video windows",
   },
 ] as const;
@@ -162,17 +162,18 @@ export default function Home() {
 
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute inset-0 hidden overflow-hidden lg:block"
+          className="pointer-events-none absolute inset-y-0 right-0 left-[29%] hidden overflow-hidden lg:block"
         >
           <div className="relative h-full w-full animate-float-product">
             <Image
-              src="/lumina-hero-light.png"
+              src="/lumina-hero-light-4.png"
               alt=""
               fill
               priority
               sizes="(min-width: 1280px) 70vw, (min-width: 1024px) 68vw, 100vw"
-              className="object-cover object-[64%_52%]"
+              className="object-cover object-[56%_50%]"
             />
+            <div className="absolute inset-y-0 left-0 w-[28%] bg-[linear-gradient(90deg,#fcfcfd_0%,rgba(252,252,253,0.96)_54%,rgba(252,252,253,0)_100%)]" />
           </div>
         </div>
 
@@ -219,14 +220,14 @@ export default function Home() {
           </div>
         </header>
 
-        <div className="relative z-10 mx-auto flex min-h-[44rem] w-full max-w-[1480px] flex-col justify-between px-6 pb-7 pt-[5.5rem] md:px-10 md:pt-24 lg:min-h-[36.5rem] lg:pb-6 xl:min-h-[38rem]">
-          <div className="grid items-center gap-10 lg:grid-cols-[minmax(24rem,31rem)_minmax(0,1fr)] lg:gap-5 xl:grid-cols-[minmax(27rem,33rem)_minmax(0,1fr)]">
+        <div className="relative z-10 mx-auto flex min-h-[43rem] w-full max-w-[1480px] flex-col justify-between px-6 pb-6 pt-[5.25rem] md:px-10 md:pt-24 lg:min-h-[35rem] lg:pb-5 xl:min-h-[36.5rem]">
+          <div className="grid items-center gap-9 lg:grid-cols-[minmax(24rem,31rem)_minmax(0,1fr)] lg:gap-4 xl:grid-cols-[minmax(27rem,32.5rem)_minmax(0,1fr)]">
             <div className="max-w-[33rem] animate-reveal-up">
-              <h1 className="text-[3.15rem] font-medium leading-[0.95] tracking-[-0.055em] text-[#14161c] sm:text-[4rem] lg:text-[4.55rem] xl:text-[5rem]">
+              <h1 className="text-[3.15rem] font-medium leading-[0.94] tracking-[-0.058em] text-[#14161c] sm:text-[4rem] lg:text-[4.5rem] xl:text-[4.9rem]">
                 <span className="block">See the future.</span>
                 <span className="block">Right now.</span>
               </h1>
-              <p className="mt-8 max-w-[22rem] text-lg leading-8 text-black/68 sm:text-[1.32rem]">
+              <p className="mt-8 max-w-[21rem] text-lg leading-8 text-black/68 sm:text-[1.28rem]">
                 Holographic glasses that bring digital experiences into your
                 world.
               </p>
@@ -250,21 +251,21 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="relative flex min-h-[16rem] items-end justify-center lg:min-h-[27rem]">
-              <div className="relative aspect-[1.5] w-full max-w-[44rem] animate-float-product lg:hidden">
+            <div className="relative flex min-h-[15rem] items-end justify-center lg:min-h-[26rem]">
+              <div className="relative aspect-[1.52] w-full max-w-[44rem] animate-float-product lg:hidden">
                 <Image
-                  src="/lumina-hero-light.png"
+                  src="/lumina-hero-light-4.png"
                   alt="Lumina holographic glasses"
                   fill
                   priority
                   sizes="100vw"
-                  className="object-cover object-center"
+                  className="object-cover object-[64%_52%]"
                 />
               </div>
             </div>
           </div>
 
-          <div className="mt-5 grid gap-6 pt-3 md:grid-cols-2 lg:mt-0 lg:grid-cols-4 lg:pt-6">
+          <div className="mt-4 grid gap-5 pt-2 md:grid-cols-2 lg:mt-0 lg:grid-cols-4 lg:pt-5">
             {heroHighlights.map(({ title, description, Icon }, index) => (
               <article
                 key={title}
@@ -289,23 +290,23 @@ export default function Home() {
       </section>
 
       <section className="px-2 pb-2 sm:px-3">
-        <div className="space-y-4">
+        <div className="space-y-3">
           <section
             id="technology"
-            className="overflow-hidden rounded-[2.5rem] border border-black/6 bg-white px-4 py-8 shadow-[0_20px_60px_rgba(15,23,42,0.06)] sm:px-8 sm:py-10 lg:px-12 lg:py-12"
+            className="overflow-hidden rounded-[2.4rem] border border-black/6 bg-white px-4 py-8 shadow-[0_16px_40px_rgba(15,23,42,0.045)] sm:px-8 sm:py-10 lg:px-12 lg:py-11"
           >
             <div className="mx-auto max-w-[52rem] text-center">
-              <h2 className="text-balance text-[2.4rem] font-medium leading-[1.05] tracking-[-0.05em] text-[#181a20] sm:text-[3rem] lg:text-[3.65rem]">
+              <h2 className="text-balance text-[2.35rem] font-medium leading-[1.04] tracking-[-0.055em] text-[#181a20] sm:text-[3rem] lg:text-[3.45rem]">
                 A new way to see, create, and connect.
               </h2>
-              <p className="mx-auto mt-5 max-w-[42rem] text-[1.03rem] leading-8 text-black/56 sm:text-[1.08rem]">
+              <p className="mx-auto mt-4 max-w-[42rem] text-[1rem] leading-8 text-black/56 sm:text-[1.05rem]">
                 Lumina blends advanced holographic optics with intuitive spatial
                 computing, unlocking experiences that feel natural, useful, and
                 magical.
               </p>
             </div>
 
-            <div className="mt-10 grid gap-5 lg:grid-cols-4">
+            <div className="mt-9 grid gap-5 lg:grid-cols-4">
               {showcaseCards.map((card) => (
                 <article key={card.title} className="text-center">
                   <div className="overflow-hidden rounded-[1.55rem] border border-black/8 bg-[#f6f7fb]">
@@ -319,10 +320,10 @@ export default function Home() {
                       />
                     </div>
                   </div>
-                  <h3 className="mt-4 text-[1.55rem] font-medium tracking-[-0.03em] text-[#181a20]">
+                  <h3 className="mt-4 text-[1.2rem] font-medium tracking-[-0.04em] text-[#181a20] sm:text-[1.32rem]">
                     {card.title}
                   </h3>
-                  <p className="mx-auto mt-2 max-w-[15rem] text-[0.97rem] leading-7 text-black/50">
+                  <p className="mx-auto mt-2 max-w-[15rem] text-[0.93rem] leading-7 text-black/50">
                     {card.description}
                   </p>
                 </article>
@@ -330,7 +331,7 @@ export default function Home() {
             </div>
           </section>
 
-          <section className="overflow-hidden rounded-[2.5rem] border border-black/6 bg-white px-4 py-8 shadow-[0_20px_60px_rgba(15,23,42,0.06)] sm:px-8 sm:py-10 lg:px-12 lg:py-12">
+          <section className="overflow-hidden rounded-[2.4rem] border border-black/6 bg-white px-4 py-8 shadow-[0_16px_40px_rgba(15,23,42,0.045)] sm:px-8 sm:py-10 lg:px-12 lg:py-11">
             <div className="grid gap-10 lg:grid-cols-[minmax(18rem,0.36fr)_minmax(0,0.64fr)] lg:items-center">
               <div className="flex h-full flex-col justify-between">
                 <div>
@@ -362,11 +363,11 @@ export default function Home() {
               <div className="relative">
                 <div className="relative aspect-[1.38] overflow-hidden rounded-[2rem] bg-[#f7f8fc]">
                   <Image
-                    src="/lumina-detail-light.png"
+                    src="/lumina-detail-light-2.png"
                     alt="Lumina glasses detail render"
                     fill
                     sizes="(min-width: 1024px) 60vw, 100vw"
-                    className="object-cover"
+                    className="object-cover object-center"
                   />
                   {designCallouts.map((callout) => (
                     <div
@@ -388,7 +389,7 @@ export default function Home() {
 
           <section
             id="developers"
-            className="overflow-hidden rounded-[2.5rem] border border-black/6 bg-white px-4 py-8 shadow-[0_20px_60px_rgba(15,23,42,0.06)] sm:px-8 sm:py-10 lg:px-12 lg:py-12"
+            className="overflow-hidden rounded-[2.4rem] border border-black/6 bg-white px-4 py-8 shadow-[0_16px_40px_rgba(15,23,42,0.045)] sm:px-8 sm:py-10 lg:px-12 lg:py-11"
           >
             <div className="grid gap-10 lg:grid-cols-[minmax(18rem,0.4fr)_minmax(0,0.6fr)] lg:items-center">
               <div>
@@ -436,7 +437,7 @@ export default function Home() {
 
           <section
             id="privacy"
-            className="overflow-hidden rounded-[2.5rem] border border-black/6 bg-[#f7f8fc] px-4 py-8 shadow-[0_20px_60px_rgba(15,23,42,0.06)] sm:px-8 sm:py-10 lg:px-12 lg:py-10"
+            className="overflow-hidden rounded-[2.4rem] border border-black/6 bg-[#f7f8fc] px-4 py-8 shadow-[0_16px_40px_rgba(15,23,42,0.045)] sm:px-8 sm:py-10 lg:px-12 lg:py-10"
           >
             <div className="grid gap-5 lg:grid-cols-[minmax(18rem,1.2fr)_repeat(3,minmax(0,1fr))]">
               <div className="rounded-[1.8rem] bg-white px-6 py-7 lg:bg-transparent lg:px-0 lg:py-0">
@@ -471,19 +472,20 @@ export default function Home() {
 
           <section
             id="preorder"
-            className="overflow-hidden rounded-[2.5rem] border border-black/6 bg-white shadow-[0_20px_60px_rgba(15,23,42,0.06)]"
+            className="overflow-hidden rounded-[2.4rem] border border-black/6 bg-white shadow-[0_16px_40px_rgba(15,23,42,0.045)]"
           >
             <div className="relative px-4 py-12 sm:px-8 lg:px-12 lg:py-16">
               <div className="absolute inset-0">
                 <Image
-                  src="/lumina-earth.png"
+                  src="/lumina-earth-light.png"
                   alt=""
                   fill
                   sizes="100vw"
-                  className="object-cover object-center"
+                  className="object-cover object-[50%_58%]"
                 />
               </div>
-              <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.3)_0%,rgba(255,255,255,0.12)_48%,rgba(255,255,255,0.3)_100%)]" />
+              <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.56)_0%,rgba(255,255,255,0.28)_48%,rgba(235,244,255,0.6)_100%)]" />
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_100%,rgba(196,224,255,0.36),transparent_52%)]" />
               <div className="relative z-10 text-center">
                 <h2 className="text-balance text-[2.4rem] font-medium leading-[1.05] tracking-[-0.05em] text-[#181a20] sm:text-[3.3rem]">
                   The future is closer than you think.
