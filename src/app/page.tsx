@@ -15,12 +15,12 @@ const heroHighlights = [
   },
   {
     title: "Spatial Computing",
-    description: "Digital content in physical space",
+    description: "Open your world to digital space",
     Icon: SpatialIcon,
   },
   {
     title: "All-Day Comfort",
-    description: "Lightweight, ergonomically designed",
+    description: "Lightweight and ready to wear",
     Icon: ComfortIcon,
   },
   {
@@ -35,62 +35,39 @@ const showcaseCards = [
     title: "Visualize",
     description: "See 3D holograms in stunning detail.",
     image: "/lumina-card-visualize-light-2.png",
-    alt: "Woman wearing Lumina glasses",
+    alt: "Person wearing Lumina glasses",
   },
   {
     title: "Interact",
     description: "Use natural gestures to control your world.",
     image: "/lumina-card-interact-light.png",
-    alt: "Hands controlling floating holographic panels",
+    alt: "Hands interacting with spatial panels",
   },
   {
     title: "Create",
     description: "Turn ideas into immersive spatial experiences.",
     image: "/lumina-card-create-light.png",
-    alt: "Immersive spatial scene in a living room",
+    alt: "Living room with holographic visuals",
   },
   {
     title: "Connect",
     description: "Be present, wherever you are.",
     image: "/lumina-card-connect-light.png",
-    alt: "Person collaborating through holographic video windows",
+    alt: "Person collaborating through holographic calls",
   },
 ] as const;
 
 const specStats = [
-  { value: "76g", label: "Lightweight" },
-  { value: "4K", label: "Per Eye" },
-  { value: "70°", label: "Field of View" },
-  { value: "8hrs", label: "Battery Life" },
-] as const;
-
-const designCallouts = [
-  {
-    title: "Holographic Waveguide Optics",
-    description: "Crisp, vibrant, and immersive.",
-    className: "left-[12%] top-[5%] text-left",
-  },
-  {
-    title: "Ergonomic Fit",
-    description: "Built for all-day comfort.",
-    className: "right-[7%] top-[8%] text-right",
-  },
-  {
-    title: "Spatial Sensors",
-    description: "Understand your world in real time.",
-    className: "left-[24%] bottom-[8%] text-left",
-  },
-  {
-    title: "Privacy Shutters",
-    description: "Instantly shield your view when needed.",
-    className: "right-[6%] bottom-[10%] text-right",
-  },
+  { value: "76g", label: "Battery weight" },
+  { value: "4K", label: "Per-eye display" },
+  { value: "70°", label: "Field of view" },
+  { value: "8hrs", label: "Battery life" },
 ] as const;
 
 const computeFeatures = [
   {
     title: "Real-time Mapping",
-    description: "Understands your space instantly.",
+    description: "Understands your environment instantly.",
     Icon: MapFeatureIcon,
   },
   {
@@ -100,7 +77,7 @@ const computeFeatures = [
   },
   {
     title: "Seamless Sync",
-    description: "Works across your devices.",
+    description: "Works across your devices from day one.",
     Icon: SyncFeatureIcon,
   },
 ] as const;
@@ -118,7 +95,7 @@ const privacyCards = [
   },
   {
     title: "Secure by Design",
-    description: "Enterprise-grade security from the ground up.",
+    description: "Enterprise-grade protection from the ground up.",
     Icon: ShieldPrivacyIcon,
   },
 ] as const;
@@ -126,93 +103,67 @@ const privacyCards = [
 const footerColumns = [
   {
     title: "Product",
-    links: ["Overview", "Specs", "Compare"],
+    links: ["Overview", "Features", "Specs"],
   },
   {
-    title: "Technology",
-    links: ["Holographic Display", "Spatial Computing", "Privacy"],
-  },
-  {
-    title: "Developers",
-    links: ["SDK", "Docs", "Community"],
+    title: "Platform",
+    links: ["Technology", "Developers", "Privacy"],
   },
   {
     title: "Company",
-    links: ["About", "Careers", "Newsroom"],
+    links: ["About", "Careers", "News"],
   },
 ] as const;
 
-const socialLinks = ["X", "YT", "IG", "IN"] as const;
+const socialLinks = ["X", "IG", "YT", "IN"] as const;
 
 export default function Home() {
   return (
-    <main className="bg-[var(--background)] text-[var(--foreground)]">
+    <main className="overflow-x-hidden text-[var(--foreground)]">
       <section
         id="product"
         className="lumina-hero relative isolate overflow-hidden"
       >
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute inset-0 opacity-95"
+          className="pointer-events-none absolute inset-0 opacity-90"
         >
-          <div className="absolute -left-24 top-0 h-[28rem] w-[28rem] rounded-full bg-[#ffffff] blur-[120px]" />
-          <div className="absolute right-[10%] top-[3%] h-[24rem] w-[24rem] rounded-full bg-[#ffffff] blur-[150px]" />
-          <div className="absolute bottom-[6%] right-[18%] h-[16rem] w-[34rem] rounded-full bg-[#d7e4ff]/70 blur-[140px]" />
+          <div className="absolute -left-20 top-10 h-72 w-72 rounded-full bg-white blur-[110px]" />
+          <div className="absolute right-[8%] top-0 h-80 w-80 rounded-full bg-[#dbe7ff] blur-[140px]" />
+          <div className="absolute bottom-10 left-[55%] h-48 w-96 rounded-full bg-[#d5e4ff]/65 blur-[130px]" />
         </div>
 
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-y-0 right-0 left-[29%] hidden overflow-hidden lg:block"
-        >
-          <div className="relative h-full w-full animate-float-product">
-            <Image
-              src="/lumina-hero-light-4.png"
-              alt=""
-              fill
-              priority
-              sizes="(min-width: 1280px) 70vw, (min-width: 1024px) 68vw, 100vw"
-              className="object-cover object-[56%_50%]"
-            />
-            <div className="absolute inset-y-0 left-0 w-[28%] bg-[linear-gradient(90deg,#fcfcfd_0%,rgba(252,252,253,0.96)_54%,rgba(252,252,253,0)_100%)]" />
-          </div>
-        </div>
-
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-x-0 bottom-0 h-[34%] bg-[linear-gradient(180deg,rgba(243,244,248,0)_0%,rgba(243,244,248,0.45)_50%,rgba(243,244,248,0.96)_100%)]"
-        />
-
-        <header className="absolute inset-x-0 top-0 z-30">
-          <div className="mx-auto flex w-full max-w-[1440px] items-center justify-between px-6 py-6 md:px-10 md:py-8">
+        <header className="relative z-20">
+          <div className="mx-auto flex w-full max-w-[1380px] items-center justify-between px-5 py-5 sm:px-8 lg:px-10">
             <a
               href="#product"
-              className="cursor-pointer text-[0.95rem] tracking-[0.42em] text-[#14161b] transition-opacity duration-300 hover:opacity-75"
+              className="cursor-pointer text-[0.82rem] font-semibold tracking-[0.4em] text-[#11161f]"
             >
               LUMINA
             </a>
 
-            <nav className="hidden items-center gap-9 text-[0.95rem] text-black/72 lg:flex">
+            <nav className="hidden items-center gap-8 text-[0.92rem] text-[#5a6473] lg:flex">
               {navigation.map((item) => (
                 <a
                   key={item.label}
                   href={item.href}
-                  className="cursor-pointer transition-colors duration-300 hover:text-black"
+                  className="cursor-pointer transition-colors duration-300 hover:text-[#11161f]"
                 >
                   {item.label}
                 </a>
               ))}
             </nav>
 
-            <div className="flex items-center gap-3 text-sm md:gap-5">
+            <div className="flex items-center gap-3 text-[0.92rem]">
               <a
                 href="#developers"
-                className="cursor-pointer text-black/68 transition-colors duration-300 hover:text-black"
+                className="cursor-pointer text-[#5a6473] transition-colors duration-300 hover:text-[#11161f]"
               >
                 Sign in
               </a>
               <a
                 href="#preorder"
-                className="cursor-pointer rounded-full bg-[#4d87ff] px-5 py-3 font-medium text-white transition-transform duration-300 hover:-translate-y-0.5"
+                className="cursor-pointer rounded-full bg-[#4b82ff] px-4 py-2.5 font-medium text-white shadow-[0_14px_36px_rgba(75,130,255,0.22)] transition-transform duration-300 hover:-translate-y-0.5"
               >
                 Pre-order
               </a>
@@ -220,66 +171,71 @@ export default function Home() {
           </div>
         </header>
 
-        <div className="relative z-10 mx-auto flex min-h-[43rem] w-full max-w-[1480px] flex-col justify-between px-6 pb-6 pt-[5.25rem] md:px-10 md:pt-24 lg:min-h-[35rem] lg:pb-5 xl:min-h-[36.5rem]">
-          <div className="grid items-center gap-9 lg:grid-cols-[minmax(24rem,31rem)_minmax(0,1fr)] lg:gap-4 xl:grid-cols-[minmax(27rem,32.5rem)_minmax(0,1fr)]">
-            <div className="max-w-[33rem] animate-reveal-up">
-              <h1 className="text-[3.15rem] font-medium leading-[0.94] tracking-[-0.058em] text-[#14161c] sm:text-[4rem] lg:text-[4.5rem] xl:text-[4.9rem]">
+        <div className="relative z-10 mx-auto w-full max-w-[1380px] px-5 pb-8 pt-8 sm:px-8 lg:px-10 lg:pb-10 lg:pt-10">
+          <div className="grid items-center gap-10 lg:grid-cols-[minmax(20rem,28rem)_minmax(0,1fr)] lg:gap-8">
+            <div className="max-w-[31rem] animate-reveal-up">
+              <h1 className="text-[3.45rem] font-semibold leading-[0.94] tracking-[-0.065em] text-[#131821] sm:text-[4.35rem] lg:text-[5.15rem]">
                 <span className="block">See the future.</span>
                 <span className="block">Right now.</span>
               </h1>
-              <p className="mt-8 max-w-[21rem] text-lg leading-8 text-black/68 sm:text-[1.28rem]">
+
+              <p className="mt-6 max-w-[19rem] text-[1.05rem] leading-7 text-[#5d6878] sm:text-[1.14rem]">
                 Holographic glasses that bring digital experiences into your
                 world.
               </p>
 
-              <div className="mt-10 flex flex-wrap items-center gap-4 text-[0.98rem] sm:gap-6">
+              <div className="mt-8 flex flex-wrap items-center gap-4 text-[0.96rem]">
                 <a
                   href="#preorder"
-                  className="cursor-pointer rounded-[1.15rem] bg-[#4d87ff] px-8 py-4 font-medium text-white shadow-[0_18px_50px_rgba(77,135,255,0.22)] transition-transform duration-300 hover:-translate-y-0.5"
+                  className="cursor-pointer rounded-full bg-[#4b82ff] px-6 py-3.5 font-medium text-white shadow-[0_20px_40px_rgba(75,130,255,0.2)] transition-transform duration-300 hover:-translate-y-0.5"
                 >
                   Pre-order
                 </a>
                 <a
                   href="#technology"
-                  className="group inline-flex cursor-pointer items-center gap-3 text-black/78 transition-colors duration-300 hover:text-black"
+                  className="group inline-flex cursor-pointer items-center gap-3 text-[#4b5565] transition-colors duration-300 hover:text-[#11161f]"
                 >
                   <span>Watch demo</span>
-                  <span className="flex h-7 w-7 items-center justify-center rounded-full border border-black/18 text-[0.65rem] transition-transform duration-300 group-hover:translate-x-0.5 group-hover:border-black/38">
-                    <PlayIcon className="h-2.5 w-2.5 fill-current" />
+                  <span className="flex h-8 w-8 items-center justify-center rounded-full border border-[#d1d9e6] bg-white/85 transition-transform duration-300 group-hover:translate-x-0.5">
+                    <PlayIcon className="h-3 w-3 fill-current" />
                   </span>
                 </a>
               </div>
             </div>
 
-            <div className="relative flex min-h-[15rem] items-end justify-center lg:min-h-[26rem]">
-              <div className="relative aspect-[1.52] w-full max-w-[44rem] animate-float-product lg:hidden">
+            <div className="relative flex items-center justify-center">
+              <div className="relative aspect-[2.13] w-full max-w-[64rem] animate-float-product">
                 <Image
-                  src="/lumina-hero-light-4.png"
-                  alt="Lumina holographic glasses"
+                  src="/glass-hero.png"
+                  alt="Lumina holographic glasses hero render"
                   fill
                   priority
-                  sizes="100vw"
-                  className="object-cover object-[64%_52%]"
+                  sizes="(min-width: 1280px) 66vw, (min-width: 1024px) 60vw, 100vw"
+                  className="object-contain object-center drop-shadow-[0_30px_48px_rgba(34,46,74,0.1)]"
+                />
+                <div
+                  aria-hidden="true"
+                  className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_12%_56%,rgba(255,255,255,0.96),rgba(255,255,255,0)_22%),radial-gradient(circle_at_88%_16%,rgba(255,255,255,0.86),rgba(255,255,255,0)_18%),linear-gradient(90deg,rgba(255,255,255,0.82)_0%,rgba(255,255,255,0)_16%,rgba(255,255,255,0)_86%,rgba(255,255,255,0.74)_100%)]"
                 />
               </div>
             </div>
           </div>
 
-          <div className="mt-4 grid gap-5 pt-2 md:grid-cols-2 lg:mt-0 lg:grid-cols-4 lg:pt-5">
+          <div className="mt-10 grid gap-4 border-t border-[#e5ebf4]/70 pt-6 sm:grid-cols-2 lg:grid-cols-4">
             {heroHighlights.map(({ title, description, Icon }, index) => (
               <article
                 key={title}
-                className="animate-reveal-up flex items-start gap-4 text-black/82"
-                style={{ animationDelay: `${220 + index * 90}ms` }}
+                className="animate-reveal-up flex items-start gap-3"
+                style={{ animationDelay: `${140 + index * 80}ms` }}
               >
-                <div className="mt-1 flex h-8 w-8 flex-none items-center justify-center rounded-full border border-black/8 bg-white/80 text-[#4d87ff]">
-                  <Icon className="h-[1.125rem] w-[1.125rem]" />
+                <div className="mt-1 flex h-9 w-9 flex-none items-center justify-center rounded-full border border-[#dce4f1] bg-white/90 text-[#5c84ea] shadow-[0_8px_18px_rgba(78,111,184,0.08)]">
+                  <Icon className="h-4.5 w-4.5" />
                 </div>
                 <div>
-                  <h2 className="text-[1rem] leading-6 text-[#17181d]">
+                  <h2 className="text-[0.96rem] font-semibold text-[#151b24]">
                     {title}
                   </h2>
-                  <p className="mt-1 text-[0.94rem] leading-6 text-black/48">
+                  <p className="mt-1 text-[0.88rem] leading-6 text-[#677283]">
                     {description}
                   </p>
                 </div>
@@ -289,281 +245,256 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="px-2 pb-2 sm:px-3">
-        <div className="space-y-3">
-          <section
-            id="technology"
-            className="overflow-hidden rounded-[2.4rem] border border-black/6 bg-white px-4 py-8 shadow-[0_16px_40px_rgba(15,23,42,0.045)] sm:px-8 sm:py-10 lg:px-12 lg:py-11"
-          >
-            <div className="mx-auto max-w-[52rem] text-center">
-              <h2 className="text-balance text-[2.35rem] font-medium leading-[1.04] tracking-[-0.055em] text-[#181a20] sm:text-[3rem] lg:text-[3.45rem]">
-                A new way to see, create, and connect.
+      <div className="mx-auto w-full max-w-[1380px] px-5 pb-10 pt-8 sm:px-8 lg:px-10">
+        <section id="technology" className="rounded-[2rem] bg-white/78 px-3 py-6 sm:px-4 lg:px-0">
+          <div className="mx-auto max-w-[48rem] text-center">
+            <h2 className="text-balance text-[2.3rem] font-semibold leading-[1.02] tracking-[-0.055em] text-[#181e28] sm:text-[3.15rem]">
+              A new way to see, create, and connect.
+            </h2>
+            <p className="mx-auto mt-4 max-w-[41rem] text-[1rem] leading-8 text-[#667284]">
+              Lumina blends advanced holographic optics with intuitive spatial
+              computing, unlocking experiences that feel natural, useful, and
+              genuinely immersive.
+            </p>
+          </div>
+
+          <div className="mt-8 grid gap-5 lg:grid-cols-4">
+            {showcaseCards.map((card) => (
+              <article
+                key={card.title}
+                className="rounded-[1.7rem] border border-[#e5ebf4] bg-white px-3 pb-5 pt-3 text-center shadow-[0_16px_34px_rgba(27,39,71,0.05)]"
+              >
+                <div className="overflow-hidden rounded-[1.35rem] bg-[#f4f7fb]">
+                  <div className="relative aspect-[1.12]">
+                    <Image
+                      src={card.image}
+                      alt={card.alt}
+                      fill
+                      sizes="(min-width: 1024px) 22vw, (min-width: 640px) 44vw, 100vw"
+                      className="object-cover"
+                    />
+                  </div>
+                </div>
+                <h3 className="mt-4 text-[1.28rem] font-semibold tracking-[-0.04em] text-[#171c26]">
+                  {card.title}
+                </h3>
+                <p className="mx-auto mt-2 max-w-[14rem] text-[0.93rem] leading-7 text-[#667284]">
+                  {card.description}
+                </p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="mt-8 grid gap-8 overflow-hidden rounded-[2rem] border border-[#eaf0f8]/70 bg-[linear-gradient(180deg,#ffffff_0%,#fbfdff_100%)] px-5 py-6 shadow-[0_18px_40px_rgba(24,33,56,0.032)] sm:px-7 sm:py-8 lg:grid-cols-[minmax(17.5rem,0.32fr)_minmax(0,0.68fr)] lg:items-center lg:gap-4 lg:px-10">
+          <div className="relative z-10 min-w-0 lg:pr-2">
+            <h2 className="max-w-[10ch] text-[2.2rem] font-semibold leading-[1.04] tracking-[-0.055em] text-[#181e28] sm:text-[3rem]">
+              Designed for the future.
+            </h2>
+            <p className="mt-5 max-w-[27rem] text-[1rem] leading-8 text-[#667284]">
+              Every detail of Lumina is engineered to disappear, so your
+              experiences can take center stage. From waveguide optics to
+              ergonomic balance, each element is tuned for long-form wear.
+            </p>
+
+            <dl className="mt-8 grid grid-cols-2 gap-x-6 gap-y-5 sm:grid-cols-4 lg:mt-10 lg:grid-cols-2">
+              {specStats.map((stat) => (
+                <div key={stat.label}>
+                  <dt className="text-[2rem] font-semibold tracking-[-0.06em] text-[#4b82ff]">
+                    {stat.value}
+                  </dt>
+                  <dd className="mt-1 text-[0.94rem] leading-6 text-[#667284]">
+                    {stat.label}
+                  </dd>
+                </div>
+              ))}
+            </dl>
+          </div>
+
+          <div className="relative z-0 overflow-hidden bg-transparent lg:-my-8 lg:-mr-10 lg:w-[calc(100%+2.5rem)]">
+            <div className="relative aspect-[1.85] min-h-[15rem]">
+              <Image
+                src="/glass-annotated-cropped.png"
+                alt="Annotated Lumina glasses render with callouts"
+                fill
+                sizes="(min-width: 1024px) 58vw, 100vw"
+                className="object-contain object-[50%_50%] scale-[1.015]"
+              />
+            </div>
+          </div>
+        </section>
+
+        <section
+          id="developers"
+          className="mt-8 grid gap-8 overflow-hidden rounded-[2rem] border border-[#eaf0f8]/70 bg-[linear-gradient(180deg,#ffffff_0%,#fbfdff_100%)] px-5 py-6 shadow-[0_18px_40px_rgba(24,33,56,0.032)] sm:px-7 sm:py-8 lg:grid-cols-[minmax(17.5rem,0.32fr)_minmax(0,0.68fr)] lg:items-center lg:gap-4 lg:px-10"
+        >
+          <div className="relative z-10 min-w-0 lg:pr-2">
+            <h2 className="max-w-[12ch] text-[2.2rem] font-semibold leading-[1.04] tracking-[-0.055em] text-[#181e28] sm:text-[3rem]">
+              Powered by spatial computing.
+            </h2>
+            <p className="mt-5 max-w-[27rem] text-[1rem] leading-8 text-[#667284]">
+              Our advanced system-on-chip and AI engine work together to
+              understand your environment, anchor digital content, and make
+              interactions feel effortless.
+            </p>
+
+            <div className="mt-8 space-y-5">
+              {computeFeatures.map(({ title, description, Icon }) => (
+                <article key={title} className="flex items-start gap-4">
+                  <div className="mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-[0.95rem] border border-[#dce4f1] bg-[#f5f8fd] text-[#5c84ea]">
+                    <Icon className="h-5 w-5" />
+                  </div>
+                  <div>
+                    <h3 className="text-[1rem] font-semibold text-[#181e28]">
+                      {title}
+                    </h3>
+                    <p className="mt-1 text-[0.94rem] leading-6 text-[#667284]">
+                      {description}
+                    </p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+
+          <div className="relative z-0 overflow-hidden bg-transparent lg:-my-8 lg:-mr-10 lg:w-[calc(100%+2.5rem)]">
+            <div className="relative aspect-[1.9] min-h-[16rem]">
+              <Image
+                src="/chip.png"
+                alt="Lumina spatial computing chip render"
+                fill
+                sizes="(min-width: 1024px) 56vw, 100vw"
+                className="object-contain object-[50%_52%] scale-[1.02]"
+              />
+            </div>
+          </div>
+        </section>
+
+        <section
+          id="privacy"
+          className="mt-8 rounded-[2rem] border border-[#e5ebf4] bg-white px-5 py-6 shadow-[0_18px_40px_rgba(24,33,56,0.045)] sm:px-7 sm:py-8 lg:px-10"
+        >
+          <div className="grid gap-6 lg:grid-cols-[minmax(18rem,1.2fr)_repeat(3,minmax(0,1fr))] lg:items-start">
+            <div className="max-w-[28rem]">
+              <h2 className="max-w-[12ch] text-[2.2rem] font-semibold leading-[1.04] tracking-[-0.055em] text-[#181e28] sm:text-[3rem]">
+                Built with privacy in mind.
               </h2>
-              <p className="mx-auto mt-4 max-w-[42rem] text-[1rem] leading-8 text-black/56 sm:text-[1.05rem]">
-                Lumina blends advanced holographic optics with intuitive spatial
-                computing, unlocking experiences that feel natural, useful, and
-                magical.
+              <p className="mt-5 text-[1rem] leading-8 text-[#667284]">
+                What you see is yours alone. Lumina&apos;s displays are designed
+                so only you can see your holograms, keeping your work, your
+                business, and your data private.
               </p>
             </div>
 
-            <div className="mt-9 grid gap-5 lg:grid-cols-4">
-              {showcaseCards.map((card) => (
-                <article key={card.title} className="text-center">
-                  <div className="overflow-hidden rounded-[1.55rem] border border-black/8 bg-[#f6f7fb]">
-                    <div className="relative aspect-[1.08]">
-                      <Image
-                        src={card.image}
-                        alt={card.alt}
-                        fill
-                        sizes="(min-width: 1024px) 22vw, (min-width: 640px) 45vw, 100vw"
-                        className="object-cover"
-                      />
-                    </div>
-                  </div>
-                  <h3 className="mt-4 text-[1.2rem] font-medium tracking-[-0.04em] text-[#181a20] sm:text-[1.32rem]">
-                    {card.title}
+            {privacyCards.map(({ title, description, Icon }) => (
+              <article
+                key={title}
+                className="rounded-[1.55rem] border border-[#e8edf5] bg-[#fbfcfe] px-5 py-6 text-center"
+              >
+                <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full border border-[#dbe5f3] bg-white text-[#5c84ea] shadow-[0_10px_24px_rgba(92,132,234,0.08)]">
+                  <Icon className="h-7 w-7" />
+                </div>
+                <h3 className="mt-4 text-[1.22rem] font-semibold tracking-[-0.04em] text-[#171c26]">
+                  {title}
+                </h3>
+                <p className="mx-auto mt-2 max-w-[14rem] text-[0.92rem] leading-7 text-[#667284]">
+                  {description}
+                </p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section
+          id="preorder"
+          className="relative mt-8 overflow-hidden rounded-[2rem] border border-[#dfe8f5] bg-white shadow-[0_18px_40px_rgba(24,33,56,0.045)]"
+        >
+          <div className="absolute inset-0">
+            <Image
+              src="/lumina-earth-light.png"
+              alt=""
+              fill
+              sizes="100vw"
+              className="object-cover object-[50%_74%] opacity-[0.94]"
+            />
+          </div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_8%,rgba(255,255,255,0.86),rgba(255,255,255,0)_34%),linear-gradient(180deg,rgba(255,255,255,0.56)_0%,rgba(255,255,255,0.26)_42%,rgba(226,237,255,0.32)_100%)]" />
+          <div className="relative z-10 px-6 py-5 text-center sm:px-8 sm:py-6 lg:px-10 lg:py-4">
+            <h2 className="text-balance text-[1.55rem] font-semibold leading-[1.06] tracking-[-0.05em] text-[#181e28] sm:text-[1.9rem]">
+              The future is closer than you think.
+            </h2>
+            <p className="mx-auto mt-1.5 max-w-[30rem] text-[0.72rem] leading-5 text-[#667284] sm:text-[0.8rem]">
+              Pre-order Lumina today and be among the first to experience
+              spatial computing.
+            </p>
+            <div className="mt-2.5">
+              <a
+                href="#product"
+                className="inline-flex cursor-pointer items-center justify-center rounded-full bg-[#4b82ff] px-4 py-1.5 text-[0.74rem] font-medium text-white shadow-[0_14px_30px_rgba(75,130,255,0.18)] transition-transform duration-300 hover:-translate-y-0.5"
+              >
+                Pre-order
+              </a>
+            </div>
+            <p className="mt-1 text-[0.63rem] text-[#7d8899]">Ships early 2025</p>
+          </div>
+        </section>
+
+        <footer className="mt-8 rounded-[2rem] border border-[#e5ebf4] bg-white px-5 py-8 shadow-[0_18px_40px_rgba(24,33,56,0.04)] sm:px-7 lg:px-10">
+          <div className="grid gap-10 lg:grid-cols-[minmax(14rem,1.25fr)_minmax(0,1.5fr)_auto]">
+            <div>
+              <a
+                href="#product"
+                className="cursor-pointer text-[1.15rem] font-semibold tracking-[0.32em] text-[#141922]"
+              >
+                LUMINA
+              </a>
+              <p className="mt-4 max-w-[15rem] text-[0.95rem] leading-7 text-[#667284]">
+                Holographic glasses for the next era of computing.
+              </p>
+            </div>
+
+            <div className="grid gap-8 sm:grid-cols-3">
+              {footerColumns.map((column) => (
+                <div key={column.title}>
+                  <h3 className="text-[0.95rem] font-semibold text-[#181e28]">
+                    {column.title}
                   </h3>
-                  <p className="mx-auto mt-2 max-w-[15rem] text-[0.93rem] leading-7 text-black/50">
-                    {card.description}
-                  </p>
-                </article>
+                  <ul className="mt-4 space-y-3 text-[0.92rem] text-[#667284]">
+                    {column.links.map((link) => (
+                      <li key={link}>
+                        <a
+                          href="#product"
+                          className="cursor-pointer transition-colors duration-300 hover:text-[#181e28]"
+                        >
+                          {link}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               ))}
             </div>
-          </section>
 
-          <section className="overflow-hidden rounded-[2.4rem] border border-black/6 bg-white px-4 py-8 shadow-[0_16px_40px_rgba(15,23,42,0.045)] sm:px-8 sm:py-10 lg:px-12 lg:py-11">
-            <div className="grid gap-10 lg:grid-cols-[minmax(18rem,0.36fr)_minmax(0,0.64fr)] lg:items-center">
-              <div className="flex h-full flex-col justify-between">
-                <div>
-                  <h2 className="max-w-[10ch] text-[2.2rem] font-medium leading-[1.05] tracking-[-0.05em] text-[#181a20] sm:text-[3rem]">
-                    Designed for the future.
-                  </h2>
-                  <p className="mt-6 max-w-[24rem] text-[1rem] leading-8 text-black/58">
-                    Every detail of Lumina is engineered to disappear, so your
-                    experiences can take center stage. From ultracrisp optics to
-                    all-day comfort, we&apos;ve redefined what wearable computing
-                    can be.
-                  </p>
-                </div>
-
-                <dl className="mt-10 grid grid-cols-2 gap-6 sm:grid-cols-4 lg:mt-14 lg:grid-cols-3">
-                  {specStats.map((stat) => (
-                    <div key={stat.label}>
-                      <dt className="text-[2rem] font-medium tracking-[-0.05em] text-[#4d87ff]">
-                        {stat.value}
-                      </dt>
-                      <dd className="mt-1 text-[0.95rem] leading-6 text-black/50">
-                        {stat.label}
-                      </dd>
-                    </div>
-                  ))}
-                </dl>
-              </div>
-
-              <div className="relative">
-                <div className="relative aspect-[1.38] overflow-hidden rounded-[2rem] bg-[#f7f8fc]">
-                  <Image
-                    src="/lumina-detail-light-2.png"
-                    alt="Lumina glasses detail render"
-                    fill
-                    sizes="(min-width: 1024px) 60vw, 100vw"
-                    className="object-cover object-center"
-                  />
-                  {designCallouts.map((callout) => (
-                    <div
-                      key={callout.title}
-                      className={`absolute hidden max-w-[12rem] lg:block ${callout.className}`}
-                    >
-                      <p className="text-[0.88rem] font-medium text-[#181a20]">
-                        {callout.title}
-                      </p>
-                      <p className="mt-1 text-[0.82rem] leading-6 text-black/48">
-                        {callout.description}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <section
-            id="developers"
-            className="overflow-hidden rounded-[2.4rem] border border-black/6 bg-white px-4 py-8 shadow-[0_16px_40px_rgba(15,23,42,0.045)] sm:px-8 sm:py-10 lg:px-12 lg:py-11"
-          >
-            <div className="grid gap-10 lg:grid-cols-[minmax(18rem,0.4fr)_minmax(0,0.6fr)] lg:items-center">
-              <div>
-                <h2 className="max-w-[12ch] text-[2.2rem] font-medium leading-[1.05] tracking-[-0.05em] text-[#181a20] sm:text-[3rem]">
-                  Powered by spatial computing.
-                </h2>
-                <p className="mt-6 max-w-[28rem] text-[1rem] leading-8 text-black/58">
-                  Our advanced system-on-chip and AI engine work together to
-                  understand your environment, anchor digital content, and make
-                  interactions feel effortless.
-                </p>
-
-                <div className="mt-10 space-y-5">
-                  {computeFeatures.map(({ title, description, Icon }) => (
-                    <article key={title} className="flex items-start gap-4">
-                      <div className="mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-[0.95rem] border border-black/8 bg-[#f7f8fc] text-[#4d87ff]">
-                        <Icon className="h-5 w-5" />
-                      </div>
-                      <div>
-                        <h3 className="text-[1rem] font-medium text-[#181a20]">
-                          {title}
-                        </h3>
-                        <p className="mt-1 text-[0.94rem] leading-6 text-black/48">
-                          {description}
-                        </p>
-                      </div>
-                    </article>
-                  ))}
-                </div>
-              </div>
-
-              <div className="relative overflow-hidden rounded-[2rem] border border-black/6 bg-[#f7f8fc]">
-                <div className="relative aspect-[1.56]">
-                  <Image
-                    src="/lumina-chip-light.png"
-                    alt="Lumina chip render"
-                    fill
-                    sizes="(min-width: 1024px) 58vw, 100vw"
-                    className="object-cover"
-                  />
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <section
-            id="privacy"
-            className="overflow-hidden rounded-[2.4rem] border border-black/6 bg-[#f7f8fc] px-4 py-8 shadow-[0_16px_40px_rgba(15,23,42,0.045)] sm:px-8 sm:py-10 lg:px-12 lg:py-10"
-          >
-            <div className="grid gap-5 lg:grid-cols-[minmax(18rem,1.2fr)_repeat(3,minmax(0,1fr))]">
-              <div className="rounded-[1.8rem] bg-white px-6 py-7 lg:bg-transparent lg:px-0 lg:py-0">
-                <h2 className="max-w-[12ch] text-[2.15rem] font-medium leading-[1.08] tracking-[-0.05em] text-[#181a20] sm:text-[3rem]">
-                  Built with privacy in mind.
-                </h2>
-                <p className="mt-5 max-w-[24rem] text-[1rem] leading-8 text-black/56">
-                  What you see is yours alone. Lumina&apos;s displays are designed
-                  so only you can see your holograms, keeping your world, your
-                  business, and your data private.
-                </p>
-              </div>
-
-              {privacyCards.map(({ title, description, Icon }) => (
-                <article
-                  key={title}
-                  className="rounded-[1.8rem] border border-black/6 bg-white px-6 py-8 text-center"
-                >
-                  <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full border border-[#4d87ff]/18 bg-[#edf3ff] text-[#4d87ff]">
-                    <Icon className="h-8 w-8" />
-                  </div>
-                  <h3 className="mt-5 text-[1.4rem] font-medium tracking-[-0.03em] text-[#181a20]">
-                    {title}
-                  </h3>
-                  <p className="mx-auto mt-3 max-w-[13rem] text-[0.95rem] leading-7 text-black/48">
-                    {description}
-                  </p>
-                </article>
-              ))}
-            </div>
-          </section>
-
-          <section
-            id="preorder"
-            className="overflow-hidden rounded-[2.4rem] border border-black/6 bg-white shadow-[0_16px_40px_rgba(15,23,42,0.045)]"
-          >
-            <div className="relative px-4 py-12 sm:px-8 lg:px-12 lg:py-16">
-              <div className="absolute inset-0">
-                <Image
-                  src="/lumina-earth-light.png"
-                  alt=""
-                  fill
-                  sizes="100vw"
-                  className="object-cover object-[50%_58%]"
-                />
-              </div>
-              <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.56)_0%,rgba(255,255,255,0.28)_48%,rgba(235,244,255,0.6)_100%)]" />
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_100%,rgba(196,224,255,0.36),transparent_52%)]" />
-              <div className="relative z-10 text-center">
-                <h2 className="text-balance text-[2.4rem] font-medium leading-[1.05] tracking-[-0.05em] text-[#181a20] sm:text-[3.3rem]">
-                  The future is closer than you think.
-                </h2>
-                <p className="mx-auto mt-4 max-w-[34rem] text-[1rem] leading-8 text-black/60">
-                  Pre-order Lumina today and be among the first to experience
-                  spatial computing.
-                </p>
-                <div className="mt-8">
+            <div className="flex flex-col gap-6 lg:items-end">
+              <div className="flex items-center gap-2.5">
+                {socialLinks.map((link) => (
                   <a
+                    key={link}
                     href="#product"
-                    className="inline-flex cursor-pointer items-center justify-center rounded-full bg-[#4d87ff] px-8 py-4 font-medium text-white transition-transform duration-300 hover:-translate-y-0.5"
+                    className="flex h-9 w-9 cursor-pointer items-center justify-center rounded-full border border-[#dce4f1] text-[0.72rem] font-semibold text-[#4f5968] transition-colors duration-300 hover:border-[#bfcde2] hover:text-[#181e28]"
                   >
-                    Pre-order
+                    {link}
                   </a>
-                </div>
-                <p className="mt-4 text-sm text-black/46">Ships early 2025</p>
-              </div>
-            </div>
-          </section>
-
-          <footer className="px-3 pb-8 pt-4 sm:px-4">
-            <div className="grid gap-10 rounded-[2rem] border border-black/6 bg-white px-5 py-8 sm:px-7 lg:grid-cols-[minmax(14rem,1.2fr)_minmax(0,1.6fr)_auto] lg:items-start lg:px-10">
-              <div>
-                <a
-                  href="#product"
-                  className="cursor-pointer text-[1.55rem] tracking-[0.22em] text-[#17181d]"
-                >
-                  LUMINA
-                </a>
-                <p className="mt-4 text-[0.98rem] leading-7 text-black/54">
-                  See the future. Right now.
-                </p>
-              </div>
-
-              <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-                {footerColumns.map((column) => (
-                  <div key={column.title}>
-                    <h3 className="text-[0.95rem] font-medium text-[#181a20]">
-                      {column.title}
-                    </h3>
-                    <ul className="mt-4 space-y-3 text-[0.92rem] text-black/48">
-                      {column.links.map((link) => (
-                        <li key={link}>
-                          <a
-                            href="#product"
-                            className="cursor-pointer transition-colors duration-300 hover:text-black/78"
-                          >
-                            {link}
-                          </a>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
                 ))}
               </div>
-
-              <div className="flex flex-col gap-6 lg:items-end">
-                <div className="flex items-center gap-3">
-                  {socialLinks.map((link) => (
-                    <a
-                      key={link}
-                      href="#product"
-                      className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-black/8 text-[0.72rem] font-medium text-black/74 transition-colors duration-300 hover:border-black/18 hover:text-black"
-                    >
-                      {link}
-                    </a>
-                  ))}
-                </div>
-                <div className="text-[0.85rem] leading-6 text-black/42 lg:text-right">
-                  <p>&copy; 2024 Lumina. All rights reserved.</p>
-                  <p className="mt-2">Privacy Policy | Terms of Service</p>
-                </div>
+              <div className="text-[0.84rem] leading-6 text-[#8893a5] lg:text-right">
+                <p>&copy; 2026 Lumina. All rights reserved.</p>
+                <p className="mt-1">Privacy Policy | Terms of Service</p>
               </div>
             </div>
-          </footer>
-        </div>
-      </section>
+          </div>
+        </footer>
+      </div>
     </main>
   );
 }
